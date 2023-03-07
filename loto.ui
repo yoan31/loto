@@ -173,7 +173,6 @@
         </child>
         <child>
           <object class="tk.Button" id="button1">
-            <property name="command" type="command" cbtype="with_wid">f_tirage1an</property>
             <property name="text" translatable="yes">1 an de tirage</property>
             <layout manager="grid">
               <property name="column">0</property>
@@ -184,7 +183,6 @@
         </child>
         <child>
           <object class="tk.Button" id="button2">
-            <property name="command" type="command" cbtype="simple">f_tirage1vie</property>
             <property name="text" translatable="yes">1 vie de tirage</property>
             <layout manager="grid">
               <property name="column">1</property>
@@ -194,7 +192,6 @@
         </child>
         <child>
           <object class="tk.Button" id="button3">
-            <property name="command" type="command" cbtype="simple">f_tiragevictoire</property>
             <property name="text" translatable="yes">jusqu'a gagner</property>
             <layout manager="grid">
               <property name="column">2</property>
