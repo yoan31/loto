@@ -14,27 +14,27 @@ class LotoApp:
             height=200, text='Mes numéros :', width=200)
         self.entry1 = tk.Entry(self.labelframe_choix)
         self.vi_1 = tk.IntVar()
-        self.entry1.configure(textvariable=self.vi_1)
+        self.entry1.configure(textvariable=self.vi_1, justify="center", width=8, bg="green", font=('Arial',20,'bold'))
         self.entry1.grid(column=0, ipadx=5, padx=10, pady=5, row=0)
         self.entry2 = tk.Entry(self.labelframe_choix)
         self.vi_2 = tk.IntVar()
-        self.entry2.configure(textvariable=self.vi_2)
+        self.entry2.configure(textvariable=self.vi_2, justify="center", width=8, bg="green", font=('Arial',20,'bold'))
         self.entry2.grid(column=1, padx=10, row=0)
         self.entry3 = tk.Entry(self.labelframe_choix)
         self.vi_3 = tk.IntVar()
-        self.entry3.configure(textvariable=self.vi_3)
+        self.entry3.configure(textvariable=self.vi_3, justify="center", width=8, bg="green", font=('Arial',20,'bold'))
         self.entry3.grid(column=2, padx=10, row=0)
         self.entry4 = tk.Entry(self.labelframe_choix)
         self.vi_4 = tk.IntVar()
-        self.entry4.configure(textvariable=self.vi_4)
+        self.entry4.configure(textvariable=self.vi_4, justify="center", width=8, bg="green", font=('Arial',20,'bold'))
         self.entry4.grid(column=0, ipadx=5, padx=10, pady=5, row=1)
         self.entry5 = tk.Entry(self.labelframe_choix)
         self.vi_5 = tk.IntVar()
-        self.entry5.configure(textvariable=self.vi_5)
+        self.entry5.configure(textvariable=self.vi_5, justify="center", width=8, bg="green", font=('Arial',20,'bold'))
         self.entry5.grid(column=1, padx=10, row=1)
         self.entry6 = tk.Entry(self.labelframe_choix)
         self.vi_6 = tk.IntVar()
-        self.entry6.configure(textvariable=self.vi_6)
+        self.entry6.configure(textvariable=self.vi_6, justify="center", width=8, bg="red", font=('Arial',20,'bold'))
         self.entry6.grid(column=2, padx=10, row=1)
         self.labelframe_choix.grid(
             column=0, ipady=5, padx=5, pady=5, row=0, rowspan=1)
@@ -44,40 +44,41 @@ class LotoApp:
             height=200, text='Tirages :', width=200)
         self.entry_r1 = tk.Entry(self.labelframe_tirage)
         self.vi_r1 = tk.IntVar()
-        self.entry_r1.configure(textvariable=self.vi_r1)
+        self.entry_r1.configure(textvariable=self.vi_r1, justify="center", width=8, bg="green", font=('Arial',20,'bold'))
         self.entry_r1.grid(column=0, ipadx=5, padx=10, pady=5, row=0)
         self.entry_r2 = tk.Entry(self.labelframe_tirage)
         self.vi_r2 = tk.IntVar()
-        self.entry_r2.configure(textvariable=self.vi_r2)
+        self.entry_r2.configure(textvariable=self.vi_r2, justify="center", width=8, bg="green", font=('Arial',20,'bold'))
         self.entry_r2.grid(column=1, padx=10, row=0)
         self.entry_r3 = tk.Entry(self.labelframe_tirage)
         self.vi_r3 = tk.IntVar()
-        self.entry_r3.configure(textvariable=self.vi_r3)
+        self.entry_r3.configure(textvariable=self.vi_r3, justify="center", width=8, bg="green", font=('Arial',20,'bold'))
         self.entry_r3.grid(column=2, padx=10, row=0)
         self.entry_r4 = tk.Entry(self.labelframe_tirage)
         self.vi_r4 = tk.IntVar()
-        self.entry_r4.configure(textvariable=self.vi_r4)
+        self.entry_r4.configure(textvariable=self.vi_r4, justify="center", width=8, bg="green", font=('Arial',20,'bold'))
         self.entry_r4.grid(column=0, ipadx=5, padx=10, pady=5, row=1)
         self.entry_r5 = tk.Entry(self.labelframe_tirage)
         self.vi_r5 = tk.IntVar()
-        self.entry_r5.configure(textvariable=self.vi_r5)
+        self.entry_r5.configure(textvariable=self.vi_r5, justify="center", width=8, bg="green", font=('Arial',20,'bold'))
         self.entry_r5.grid(column=1, padx=10, row=1)
         self.entry_r6 = tk.Entry(self.labelframe_tirage)
         self.vi_r6 = tk.IntVar()
-        self.entry_r6.configure(textvariable=self.vi_r6)
+        self.entry_r6.configure(textvariable=self.vi_r6, justify="center", width=8, bg="red", font=('Arial',20,'bold'))
         self.entry_r6.grid(column=2, padx=10, row=1)
         self.button1 = tk.Button(self.labelframe_tirage)
         self.button1.configure(text='1 an de tirage')
         self.button1.grid(column=0, pady=10, row=2)
-        self.button1.configure(command=lambda: self.f_tirage(156))
+        self.button1.configure(command=lambda: self.f_tirage(156,1))
         self.button2 = tk.Button(self.labelframe_tirage)
-        self.button2.configure(text='1 vie de tirage')
+        self.button2.configure(text='100 ans de tirage')
         self.button2.grid(column=1, row=2)
-        self.button2.configure(command=lambda: self.f_tirage(15600))
+        self.button2.configure(command=lambda: self.f_tirage(15600,100))
         self.button3 = tk.Button(self.labelframe_tirage)
         self.button3.configure(text="jusqu'a gagner")
         self.button3.grid(column=2, row=2)
-        self.button3.configure(command=self.f_tiragevictoire)
+        #self.button3.configure(command=self.f_tiragevictoire)
+        self.button3.configure(command=lambda: self.f_tirage(1000000000,100))
         self.labelframe_tirage.grid(column=0, ipady=5, padx=5, pady=5, row=1)
         self.labelframe_tirage.rowconfigure(0, pad=5)
         self.labelfame_stats = tk.LabelFrame(self.toplevel1)
@@ -98,7 +99,7 @@ class LotoApp:
         self.label4.configure(textvariable=self.vi_coutcumule)
         self.label4.grid(column=1, row=1)
         self.label5 = tk.Label(self.labelfame_stats)
-        self.label5.configure(text='Nombre de bon numéros :')
+        self.label5.configure(text='Temps de jeu en années :')
         self.label5.grid(column=0, row=2)
         self.label6 = tk.Label(self.labelfame_stats)
         self.vi_nbrbonnum = tk.IntVar()
@@ -145,7 +146,7 @@ class LotoApp:
     def run(self):
         self.mainwindow.mainloop()
 
-    def f_tirage(self,nbrtirage):
+    def f_tirage(self,nbrtirage,duree):
         # 3 tirages semaine / 156 année
     
         cout = 2.52  
@@ -154,9 +155,20 @@ class LotoApp:
         bn5 = 0
         bn6 = 0
         x = 1
+        count_annee=0
 
-        while x < nbrtirage :
+        if duree == 1:
+            self.vi_nbrbonnum.set(duree)
+
+        while x < nbrtirage or bn6 == 1 :
+            #if bn6 < 1:
+            #    break
             
+            if duree == 100:
+                if x % 156 == 0:
+                    count_annee +=1
+                    self.vi_nbrbonnum.set(count_annee)
+
             numbers = set()
 
             while len(numbers) < 5:
@@ -191,11 +203,10 @@ class LotoApp:
                     bn6 +=1
                     self.vi_3bn.set(bn6)
 
-
-            self.vi_nbrbonnum.set(nb_points_communs)
            
             # on incrémentre le nombre de tirage
-            self.vi_nbrtirage.set(x)
+            x_formate = "{:,d}".format(x).replace(","," ")
+            self.vi_nbrtirage.set(x_formate)
 
             # on incremente le cout
             cout += 2.52
@@ -205,6 +216,7 @@ class LotoApp:
             self.toplevel1.update_idletasks()
 
             x += 1
+        
 
             
     def f_nombres_aleatoires(self):
@@ -218,69 +230,6 @@ class LotoApp:
         self.vi_4.set(numbers.pop())
         self.vi_5.set(numbers.pop())
         self.vi_6.set(random.randint(1,10))   
-
-
-    def f_tiragevictoire(self):
-        # 3 tirages semaine / 156 année
-        cout = 2.52  
-        bn3 = 0
-        bn4 = 0
-        bn5 = 0
-        bn6 = 0
-        x = 1
-        
-        while bn6 < 1 :
-            
-            numbers = set()
-
-            while len(numbers) < 5:
-                numbers.add(random.randint(1, 49))
-            self.vi_r1.set(numbers.pop())
-            self.vi_r2.set(numbers.pop())
-            self.vi_r3.set(numbers.pop())
-            self.vi_r4.set(numbers.pop())
-            self.vi_r5.set(numbers.pop())
-            self.vi_r6.set(random.randint(1,10))
-
-            # on met tout ceci dans un tableau
-            t_tirage = [self.entry_r1.get(), self.entry_r2.get(), self.entry_r3.get(), self.entry_r4.get(), self.entry_r5.get(), self.entry_r1.get()]
-            t_monchoix = [self.entry1.get(), self.entry2.get(), self.entry3.get(), self.entry4.get(), self.entry5.get(), self.entry6.get()]
-            
-            # on compare les 2 tableaux
-            nb_points_communs = 0
-
-            for element in t_monchoix:
-                if element in t_tirage:
-                    nb_points_communs += 1
-                if nb_points_communs == 3 :
-                    bn3 +=1
-                    self.vi_3bn.set(bn3)
-                if nb_points_communs == 4 :
-                    bn4 +=1
-                    self.vi_4bn.set(bn4)
-                if nb_points_communs == 5 :
-                    bn5 +=1
-                    self.vi_5bn.set(bn5)
-                if nb_points_communs == 6 :
-                    bn6 +=1
-                    self.vi_3bn.set(bn6)
-
-
-            self.vi_nbrbonnum.set(nb_points_communs)
-           
-            # on incrémentre le nombre de tirage
-            x += 1
-            self.vi_nbrtirage.set(x)
-            
-            self.toplevel1.update_idletasks()
-            
-
-            # on incremente le cout
-            cout += 2.52
-            cout_formate = "{:,.2f}".format(cout).replace(","," ")
-            self.vi_coutcumule.set(cout_formate)
-            
-            x += 1
     
 
 
