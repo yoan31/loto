@@ -8,7 +8,7 @@ class LotoApp:
         self.toplevel1 = tk.Tk() if master is None else tk.Toplevel(master)
         self.toplevel1.configure(height=200, padx=10, pady=10, width=200)
         self.toplevel1.resizable(False, False)
-        self.toplevel1.title("Loto Pthon")
+        self.toplevel1.title("Loto Python")
         self.labelframe_choix = tk.LabelFrame(self.toplevel1)
         self.labelframe_choix.configure(
             height=200, text='Mes numéros :', width=200)
